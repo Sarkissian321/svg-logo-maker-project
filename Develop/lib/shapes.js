@@ -1,33 +1,54 @@
 class Shape {
     constructor() {
-        this.fillColor = "white"; // This is the default color
+      this.color = "white"; // Default color
     }
-
+  
     setColor(color) {
-        this.fillColor = color;
+      this.color = color;
     }
-
+  }
+  
+  class Circle extends Shape {
+    constructor(cx = 150, cy = 100, r = 80) {
+      super();
+      this.cx = cx;
+      this.cy = cy;
+      this.r = r;
+    }
+  
     render() {
-       
+      return `<circle cx="${this.cx}" cy="${this.cy}" r="${this.r}" fill="${this.color}" />`;
     }
-}
-
-class Circle extends Shape {
+  }
+  
+  class Triangle extends Shape {
+    constructor() {
+      super();
+      this.points = "150, 18 244, 182 56, 182";
+    }
+  
     render() {
-        return `<circle cx="150" cy="100" r="80" fill="${this.fillColor}" />`;
+      return `<polygon points="${this.points}" fill="${this.color}" />`;
     }
-}
-
-class Triangle extends Shape {
+  }
+  
+  class Square extends Shape {
+    constructor(x = 90, y = 40, width = 120, height = 120) {
+      super();
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
+    }
+  
     render() {
-        return `<polygon points="150, 18 244, 182 56, 182" fill="${this.fillColor}" />`;
+      return `<rect x="${this.x}" y="${this.y}" width="${this.width}" height="${this.height}" fill="${this.color}" />`;
     }
-}
-
-class Square extends Shape {
-    render() {
-        return `<rect x="90" y="40" width="120" height="120" fill="${this.fillColor}" />`;
-    }
-}
-
-module.exports = { Square, Triangle, Circle };
+  }
+  
+  module.exports = {
+    Square: Square,
+    Triangle: Triangle,
+    Circle: Circle
+  };
+  

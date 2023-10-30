@@ -1,41 +1,67 @@
 class SVG {
-    constructor() {
-        this.width = 300;
-        this.height = 200;
-        this.textValue = "";
-        this.textColor = "";
-        this.shape = null;
+    constructor(width = 300, height = 200) {
+      this.width = width;
+      this.height = height;
+      this.textElement = null;
+      this.shapeElement = null;
     }
-
+  
     setText(text, color) {
-        if (text.length > 3) {
-            throw new Error("Text must not exceed 3 characters.");
-        }
-        this.textValue = text;
-        this.textColor = color;
+      if (text.length > 3) {
+        throw new Error("Text must not exceed 3 characters.");
+      }
+  
+      this.textElement = {
+        content: text,
+        color: color,
+        x: this.width / 2,
+        y: (this.height + 30) / 2,  // Adjusted this for better vertical alignment.
+        fontSize: 60,
+        anchor: 'middle'
+      };
     }
-
+  
     setShape(shape) {
-        this.shape = shape;
+      this.shapeElement = shape;
     }
-
+  
     render() {
-        let svgString =
-            `<svg version="1.1" width="${this.width}" height="${this.height}" xmlns="http://www.w3.org/2000/svg">`;
-
-        // Append the shape if available
-        if (this.shape) {
-            svgString += this.shape.render();
-        }
-
-        // Append the text
-        if (this.textValue) {
-            svgString += `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.textColor}">${this.textValue}</text>`;
-        }
-
-        svgString += `</svg>`;
-        return svgString;
+      let svgContent = `<svg version="1.1" width="${this.width}" height="${this.height}" xmlns="http://www.w3.org/2000/svg">`;
+  
+      if (this.shapeElement) {
+        svgContent += this.shapeElement.render();
+      }
+  
+      if (this.textElement) {
+        svgContent += `<text x="${this.textElement.x}" y="${this.textElement.y}" font-size="${this.textElement.fontSize}" text-anchor="${this.textElement.anchor}" fill="${this.textElement.color}">${this.textElement.content}</text>`;
+      }
+  
+      svgContent += '</svg>';
+  
+      return svgContent;
     }
-}
-
-module.exports = SVG;
+  }
+  
+  class Square {
+    constructor(x = 90, y = 40, width = 120, height = 120) {
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
+      this.color = 'white'; // default color
+    }
+  
+    setColor(color) {
+      this.color = color;
+    }
+  
+    render() {
+      return `<rect x="${this.x}" y="${this.y}" width="${this.width}" height="${this.height}" fill="${this.color}" />`;
+    }
+  }
+  
+  module.exports = {
+    SVG: SVG,
+    Square: Square
+  };
+  
