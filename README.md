@@ -16,7 +16,7 @@
   ## Desription
 
  The SVG Logo Maker app is a tool designed to create customizable SVG logos efficiently. Users can specify text and color attributes, ensuring their logo reflects their brand's essence. With built-in shape integration, the app allows users to combine textual elements with geometric shapes for a more distinct visual impact. Through a series of tests, the app ensures the logo's text remains concise, and the final SVG output adheres to set specifications. This user-friendly app streamlines the process of logo creation, making it accessible to both designers and non-designers alike.
- [Untitled_ Oct 30, 2023 2_41 PM.webm](https://github.com/Sarkissian321/svg-logo-maker-project/assets/142841411/66b1aa36-902a-4345-b816-227055a55bac)
+https://drive.google.com/file/d/1mHeZJeuZDJMmEtlnI-Fh8L-Jg02D7zSY/view
 
   ## GitHub Repository Link
 
