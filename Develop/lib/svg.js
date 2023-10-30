@@ -15,7 +15,11 @@ class SVG {
         content: text,
         color: color,
         x: this.width / 2,
-        y: (this.height + 30) / 2,  // Adjusted this for better vertical alignment.
+        y: (this.height / 2) + (60 / 3) + 5,
+
+
+
+ 
         fontSize: 60,
         anchor: 'middle'
       };
@@ -48,7 +52,7 @@ class SVG {
       this.y = y;
       this.width = width;
       this.height = height;
-      this.color = 'white'; // default color
+      this.color = 'white'; 
     }
   
     setColor(color) {
@@ -60,8 +64,5 @@ class SVG {
     }
   }
   
-  module.exports = {
-    SVG: SVG,
-    Square: Square
-  };
-  
+  module.exports = 
+    SVG;
