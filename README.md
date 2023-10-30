@@ -6,10 +6,9 @@
 
   - [Table of Contents](#table-of-contents)
   - [Desription](#desription)
-  - [GitHub Repository Link](#repository-link)
   - [Testing](#testing)
   - [Usage](#usage)
-  - [Questiosn](#questiosn)
+  - [Repository Link](#repository)
   - [GitHub](#github)
   - [Email](#email)
 
@@ -21,10 +20,6 @@
 https://github.com/Sarkissian321/svg-logo-maker-project/assets/142841411/35946da8-ea61-4114-bb3c-651d5d77f66b
 
 
-  ## GitHub Repository Link
-
-  https://github.com/Sarkissian321/svg-logo-maker-project
-
   ## Testing
 
   npm testing
@@ -33,9 +28,9 @@ https://github.com/Sarkissian321/svg-logo-maker-project/assets/142841411/35946da
 
   To use this app simply clone the repository to your machine and run the command <node server> and follow the questions to make your logo.
 
-  ## Questions
+  ## Repository Link
 
-  Feel free to email me should you have any questions.
+  https://github.com/Sarkissian321/svg-logo-maker-project
 
   ## GitHub
 
